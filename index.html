@@ -1,448 +1,272 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonu Rajpoot - Web Developer Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0; /* Remove default body margin */
-            overflow-x: hidden; /* Prevent horizontal scroll */
-        }
-        #contact,#projects,#about{
-            background: rgba(133, 255, 239, 0.5);
-        }
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: -1; /* Send the video to the background */
-        }
-        .video-background video {
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            object-fit: cover; /* Cover the entire area */
-        }
-        .content-overlay {
-            position: relative;
-            z-index: 1; /* Keep content above the video */
-            background-color: rgba(255, 255, 255, 0.2); /* Add a white overlay for readability */
-            min-height: 100vh; /* Ensure content area takes full height */
-            display: flex;
-            flex-direction: column;
-        }
-        .project-card {
-            background-color: #141414;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            padding: 1.5rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin-bottom: 1.5rem;
-        }
-        .project-card:hover {
-            transform: translateY(-0.5rem);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        .project-card h3 {
-            color: #4f46e5;
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        .project-card p {
-            color: #6b7280;
-            margin-bottom: 1rem;
-        }
-        .project-card a {
-            color: #3b82f6;
-            transition: color 0.3s ease;
-        }
-        .project-card a:hover {
-            color: #2563eb;
-        }
-        .section-title {
-            color: #1e293b;
-            font-size: 2.25rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <div class="video-background">
-        <video autoplay muted loop>
-            <source src="https://cdn.pixabay.com/video/2023/10/24/186363-877727695_tiny.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+<section id="projects" class="bg-white rounded-lg shadow-lg p-8 mb-10">
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Sarkari Result -->
+        <div class="project-card">
+            <img src="images/sarkariresult.webp" alt="Sarkari Result Website" class="rounded-md mb-4">
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">Sarkari Result Website</h3>
+            <p class="text-gray-700 mb-4">
+                A fully custom-built WordPress job portal developed using ACF and a custom theme. Designed for
+                easy and fast job posting for non-technical users.
+            </p>
+            <a href="https://www.sarkariresult.group/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
+        <!-- Bridge Purple -->
+        <div class="project-card">
+            <img src="https://placehold.co/400x300/EEE/31343C" alt="Bridge Purple LMS Website" class="rounded-md mb-4">
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">Bridge Purple</h3>
+            <p class="text-gray-700 mb-4">
+                A complete LMS platform for online courses with a clean interface, secure payments, and user-friendly learning experience.
+            </p>
+            <a href="https://bridgepurple.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
+        <!-- Shubham Tent House -->
+        <div class="project-card">
+            <img src="https://placehold.co/400x300/EEE/31343C" alt="Shubham Tent House Website" class="rounded-md mb-4">
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">Shubham Tent House</h3>
+            <p class="text-gray-700 mb-4">
+                A modern and responsive website built for an event and tent service provider to showcase services and portfolio.
+            </p>
+            <a href="https://shubhamtenthouse.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
+        <!-- Bolt Movies -->
+        <div class="project-card">
+            <img src="https://placehold.co/400x300/EEE/31343C" alt="Movies Listing Website" class="rounded-md mb-4">
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">Bolt Movies</h3>
+            <p class="text-gray-700 mb-4">
+                A fully custom movie listing site built using CPT, MetaBox, and a scratch-built theme with dynamic filtering and responsive UI.
+            </p>
+            <a href="https://boltmovies.com" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
+        <!-- Ethnika Shopify -->
+        <div class="project-card">
+            <img src="https://placehold.co/400x300/EEE/31343C" alt="Ethnika Shopify Store" class="rounded-md mb-4">
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">Ethnika – Shopify Store</h3>
+            <p class="text-gray-700 mb-4">
+                A beautifully designed Shopify e-commerce store for ethnic clothing with optimized product pages and seamless checkout.
+            </p>
+            <a href="https://www.ethnika.in/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
+        <!-- Archita Essentials -->
+        <div class="project-card">
+            <img src="https://placehold.co/400x300/EEE/31343C" alt="Archita Essentials Store" class="rounded-md mb-4">
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">Archita Essentials</h3>
+            <p class="text-gray-700 mb-4">
+                A full WooCommerce store featuring 150+ products, built with Elementor and optimized for conversions.
+            </p>
+            <a href="https://architaessentials.com" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
+        <!-- Blooming Himalaya -->
+        <div class="project-card">
+            <a href="https://bloominghimalaya.com/">
+                <img src="https://bloominghimalaya.com/wp-content/uploads/2022/08/16-5-600x540.webp" width="400" height="300" alt="Blooming Himalaya Travel Website" class="rounded-md mb-4">
+            </a>
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">Blooming Himalaya</h3>
+            <p class="text-gray-700 mb-4">
+                A travel and tour booking website offering travel packages with a visually engaging design and user-friendly booking flow.
+            </p>
+            <a href="https://bloominghimalaya.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
+        <!-- Gurkha Nimto Restaurant -->
+        <div class="project-card">
+            <a href="https://gurkhanimtorestaurant.co.uk/">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipOhuwA7IPqG-i8RNHbXTH_VwYYQ5VHnokdT7RZn=w213-h160-k-no" width="400" height="300" alt="Restaurant Website" class="rounded-md mb-4">
+            </a>
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">Gurkha Nimto Restaurant</h3>
+            <p class="text-gray-700 mb-4">
+                A restaurant website with online menu, gallery, and reservation features designed for easy customer access.
+            </p>
+            <a href="https://gurkhanimtorestaurant.co.uk/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
+        <!-- Girvana Foods -->
+        <div class="project-card">
+            <a href="https://girvanafoods.com/">
+                <img src="https://girvanafoods.com/wp-content/uploads/2025/03/9.webp" width="400" height="300" alt="Girvana Foods E-commerce" class="rounded-md mb-4">
+            </a>
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">Girvana Foods</h3>
+            <p class="text-gray-700 mb-4">
+                A custom e-commerce website for organic food products with optimized WooCommerce setup and clean UI.
+            </p>
+            <a href="https://girvanafoods.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
+        <!-- The Game Alley -->
+        <div class="project-card">
+            <a href="https://thegamealley.com/">
+                <img src="https://thegamealley.com/wp-content/uploads/2025/02/computer-games-6578102_1280.jpg" width="400" height="300" alt="The Game Alley Website" class="rounded-md mb-4">
+            </a>
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">The Game Alley</h3>
+            <p class="text-gray-700 mb-4">
+                A gaming parlour website displaying services, game list, timings, and contact options with a modern UI.
+            </p>
+            <a href="https://thegamealley.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
+        <!-- Blinkx Media -->
+        <div class="project-card">
+            <a href="https://blinkxmedia.com/">
+                <img src="https://blinkxmedia.com/wp-content/uploads/2022/03/left-decor-we-do-01.jpg" width="400" height="300" alt="Blinkx Media Agency" class="rounded-md mb-4">
+            </a>
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">Blinkx Media</h3>
+            <p class="text-gray-700 mb-4">
+                A digital marketing agency website focusing on branding, SEO, and social media services with a stylish and premium layout.
+            </p>
+            <a href="https://blinkxmedia.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
+        <!-- El Viaje De Shiva -->
+        <div class="project-card">
+            <a href="https://elviajedeshiva.com/">
+                <img src="https://elviajedeshiva.com/wp-content/uploads/2025/04/kerala-2.webp" width="400" height="300" alt="Travel Blog & Booking Website" class="rounded-md mb-4">
+            </a>
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">El Viaje De Shiva</h3>
+            <p class="text-gray-700 mb-4">
+                A travel blog + online tour booking platform with multilingual support and SEO-optimized content.
+            </p>
+            <a href="https://elviajedeshiva.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
+        <!-- Chimney Hobs -->
+        <div class="project-card">
+            <a href="https://chimneyhobs.com/">
+                <img src="https://chimneyhobs.com/wp-content/uploads/2024/12/ccb6.jpg" width="400" height="300" alt="Chimney Hobs Service Website" class="rounded-md mb-4">
+            </a>
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">Chimney Hobs</h3>
+            <p class="text-gray-700 mb-4">
+                A service-based website offering chimney and kitchen appliance repair services with lead form integration.
+            </p>
+            <a href="https://chimneyhobs.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
+        <!-- Dhruv Service Center -->
+        <div class="project-card">
+            <a href="https://dhruvservicecenter.com/">
+                <img src="https://dhruvservicecenter.com/wp-content/uploads/2025/02/1.png" width="400" height="300" alt="Dhruv Service Center Website" class="rounded-md mb-4">
+            </a>
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">Dhruv Service Center</h3>
+            <p class="text-gray-700 mb-4">
+                A service center website providing home appliance repair details, pricing info, and an easy inquiry system.
+            </p>
+            <a href="https://dhruvservicecenter.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
+        <!-- Guru Enterprises -->
+        <div class="project-card">
+            <a href="https://guruenterprises.online/">
+                <img src="https://guruenterprises.online/wp-content/uploads/2025/03/WhatsApp-Image-2025-03-27-at-6.04.54-PM-1024x1024.jpeg" width="400" height="300" alt="Guru Enterprises AC Service Website" class="rounded-md mb-4">
+            </a>
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">Guru Enterprises</h3>
+            <p class="text-gray-700 mb-4">
+                A complete lead-generation website for AC servicing and installation with a modern design and clear service layout.
+            </p>
+            <a href="https://guruenterprises.online/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
+        <!-- Ardistudio -->
+        <div class="project-card">
+            <a href="https://ardistudio.online/">
+                <img src="https://ardistudio.online/wp-content/uploads/2025/02/2025-01-31.jpg" width="400" height="300" alt="Ardistudio Interior Design Website" class="rounded-md mb-4">
+            </a>
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">Ardistudio</h3>
+            <p class="text-gray-700 mb-4">
+                A premium interior design portfolio website for a Lucknow-based studio showcasing projects, galleries, and client testimonials.
+            </p>
+            <a href="https://ardistudio.online/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
+        <!-- Pigeon Invisible Grill -->
+        <div class="project-card">
+            <a href="https://pigeoninvisiblegrill.com/">
+                <img src="https://pigeoninvisiblegrill.com/wp-content/uploads/2025/03/2-460x460.webp" width="400" height="300" alt="Invisible Grill Website" class="rounded-md mb-4">
+            </a>
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">Pigeon Invisible Grill</h3>
+            <p class="text-gray-700 mb-4">
+                A niche service website offering invisible grill installation with product highlights, benefits, and lead capture.
+            </p>
+            <a href="https://pigeoninvisiblegrill.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
+        <!-- PD Public Schools -->
+        <div class="project-card">
+            <a href="https://pdpublicschools.com/">
+                <img src="https://pdpublicschools.com/wp-content/uploads/2025/01/hhhhkhk.jpg" width="400" height="300" alt="School Website" class="rounded-md mb-4">
+            </a>
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">PD Public Schools</h3>
+            <p class="text-gray-700 mb-4">
+                A complete school website with academic details, admission info, gallery, and student resources.
+            </p>
+            <a href="https://pdpublicschools.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
+        <!-- Advance Pani -->
+        <div class="project-card">
+            <a href="https://advancepani.com/">
+                <img src="https://advancepani.com/wp-content/uploads/2025/01/Advancepani-banner-image-1-scaled.webp" width="400" height="300" alt="Water Service Website" class="rounded-md mb-4">
+            </a>
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">Advance Pani</h3>
+            <p class="text-gray-700 mb-4">
+                A corporate website for water solutions and RO services with a clean layout and service-oriented structure.
+            </p>
+            <a href="https://advancepani.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
+        <!-- Kodestree -->
+        <div class="project-card">
+            <a href="https://kodestree.com/">
+                <img src="https://kodestree.com/wp-content/uploads/2025/02/bootcamp-course-page3-02-scaled.webp" width="400" height="300" alt="Kodestree Learning Platform" class="rounded-md mb-4">
+            </a>
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">Kodestree</h3>
+            <p class="text-gray-700 mb-4">
+                A professional online learning platform offering coding bootcamps with secure payments and interactive UI.
+            </p>
+            <a href="https://kodestree.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
+        <!-- Score99 Academy -->
+        <div class="project-card">
+            <a href="https://score99academy.com/">
+                <img src="https://score99academy.com/wp-content/uploads/2024/11/fhfh-1024x1024.jpg" width="400" height="300" alt="Score99 Coaching Website" class="rounded-md mb-4">
+            </a>
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">Score99 Academy</h3>
+            <p class="text-gray-700 mb-4">
+                A coaching institute website built with academic course pages, study materials, and high-performance optimization.
+            </p>
+            <a href="https://score99academy.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
+        <!-- KPC Vet Edu -->
+        <div class="project-card">
+            <a href="https://kpcvetedu.in/">
+                <img src="https://kpcvetedu.in/wp-content/uploads/2024/01/KPC_logo-removebg-preview-1.png" width="400" height="300" alt="Veterinary Education Website" class="rounded-md mb-4">
+            </a>
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">KPC Vet Edu</h3>
+            <p class="text-gray-700 mb-4">
+                An educational website for veterinary studies featuring course details, admission information, and study resources.
+            </p>
+            <a href="https://kpcvetedu.in/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
+        <!-- Infinite Slider -->
+        <div class="project-card">
+            <a href="https://sonurajpoot463.github.io/infinite-carousel/">
+                <img src="https://github.com/sonurajpoot463/portfolio/blob/main/images/infinite%20responsive%20slider.png?raw=true" width="400" height="300" alt="Infinite Carousel Slider" class="rounded-md mb-4">
+            </a>
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">Infinite Responsive Carousel Slider</h3>
+            <p class="text-gray-700 mb-4">
+                A custom-built responsive infinite slider with auto-scroll, arrows, and dots — created using HTML, CSS & JavaScript.
+            </p>
+            <a href="https://sonurajpoot463.github.io/infinite-carousel/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
+        </div>
+
     </div>
-
-    <div class="content-overlay">
-        <header class="bg-gradient-to-r from-blue-500 to-black-600 text-white py-6 shadow-md rounded-b-lg">
-            <div class="container mx-auto px-4">
-                <div class="flex justify-between items-center">
-                    <a href="https://sonurajpoot463.github.io/portfolio/"><h1 class="text-3xl font-semibold">Sonu Rajpoot</h1></a>
-                    <nav>
-                        <ul class="flex space-x-8">
-                            <li><a href="#about" class="hover:text-gray-200 transition duration-300 text-lg font-medium">About</a></li>
-                            <li><a href="#projects" class="hover:text-gray-200 transition duration-300 text-lg font-medium">Projects</a></li>
-                            <li><a href="#contact" class="hover:text-gray-200 transition duration-300 text-lg font-medium">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
-        <main class="container mx-auto px-4 py-10 flex-grow">
-            <section id="about" class="bg-white rounded-lg shadow-lg p-8 mb-10">
-                <h2 class="section-title">About Me</h2>
-                <p class=".text-white text-lg">
-                    Hello! I'm Sonu Rajpoot, a passionate and experienced web developer with over 2.5 years of experience specializing in WordPress. I hold a B.Tech in Computer Science from RRIMT, Lucknow (2019). I have a strong command of HTML, CSS, and JavaScript, and I am proficient in WordPress, Elementor, and developing custom themes and plugins. I have successfully delivered over 25 websites, including blogs, digital agency sites, e-commerce platforms, landing pages, medical websites, and school websites. I also run a website <a href="https://updater.blog/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 transition duration-300">Updater.blog</a>.
-                </p>
-            </section>
-            <section id="projects" class="bg-white rounded-lg shadow-lg p-8 mb-10">
-                <h2 class="section-title">My Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                    <div class="project-card">
-                        <img src="images/sarkariresult.webp" alt="Forum Website Screenshot" class="rounded-md mb-4">
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Sarkari Result Site</h3>
-                        <p class="text-gray-700 mb-4">
-                            A Job Posting Website developed using Custom Theme And Acf Plugin. For Non Technical Person TO Easy Posting Blog.
-                        </p>
-                        <a href="https://www.sarkariresult.group/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://placehold.co/400x300/EEE/31343C" alt="Online Marketplace Screenshot" class="rounded-md mb-4">
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Bridge Purple Website</h3>
-                        <p class="text-gray-700 mb-4">
-                            Courses And Lms Based Site.
-                        </p>
-                        <a href="https://bridgepurple.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://placehold.co/400x300/EEE/31343C" alt="News Website Screenshot" class="rounded-md mb-4">
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Shubham Tent House/</h3>
-                        <p class="text-gray-700 mb-4">
-                            A website for Tent House.
-                        </p>
-                        <a href="https://shubhamtenthouse.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://placehold.co/400x300/EEE/31343C" alt="Podcast Website Screenshot" class="rounded-md mb-4">
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Movies posting Site</h3>
-                        <p class="text-gray-700 mb-4">
-                            A website for Movies Listing. from Scratch theme development, metabox and cpt uses.
-                        </p>
-                        <a href="https://boltmovies.com" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://placehold.co/400x300/EEE/31343C" alt="Video Streaming Website Screenshot" class="rounded-md mb-4">
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Ethnika Shopify Website</h3>
-                        <p class="text-gray-700 mb-4">
-                           A Shopify Ecommerce platform for clothing site.
-                        </p>
-                        <a href="https://www.ethnika.in/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                       <div class="project-card">
-                        <img src="https://placehold.co/400x300/EEE/31343C" alt="Mobile App Landing Page Screenshot" class="rounded-md mb-4">
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Mobile App Landing Page</h3>
-                        <p class="text-gray-700 mb-4">
-                           A landing page to showcase a mobile application.
-                        </p>
-                        <a href="#" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-
-                    <div class="project-card">
-                        <img src="https://placehold.co/400x300/EEE/31343C" alt="Mobile App Landing Page Screenshot" class="rounded-md mb-4">
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Mobile App Landing Page</h3>
-                        <p class="text-gray-700 mb-4">
-                           A landing page to showcase a mobile application.
-                        </p>
-                        <a href="#" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-
-                    <div class="project-card">
-                        <img src="https://placehold.co/400x300/EEE/31343C" alt="Mobile App Landing Page Screenshot" class="rounded-md mb-4">
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Mobile App Landing Page</h3>
-                        <p class="text-gray-700 mb-4">
-                           A landing page to showcase a mobile application.
-                        </p>
-                        <a href="#" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-
-                    <div class="project-card">
-                        <img src="https://placehold.co/400x300/EEE/31343C" alt="Mobile App Landing Page Screenshot" class="rounded-md mb-4">
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Archita Essentials</h3>
-                        <p class="text-gray-700 mb-4">
-                           As E-commerce website created using elementor and woocommerce plugin with more than 150 products.
-                        </p>
-                        <a href="https://architaessentials.com" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-
-                    <div class="project-card">
-                        <a href="https://bloominghimalaya.com/"><img src="https://bloominghimalaya.com/wp-content/uploads/2022/08/16-5-600x540.webp" width="400" height="300" alt="Blooming Himalaya Screenshot" class="rounded-md mb-4"></a>
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Blooming Himalaya</h3>
-                        <p class="text-black-700 mb-4">
-                            A website for tour and travel services.
-                        </p>
-                        <a href="https://bloominghimalaya.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <a href="https://gurkhanimtorestaurant.co.uk/">
-                        <img src="https://lh3.googleusercontent.com/p/AF1QipOhuwA7IPqG-i8RNHbXTH_VwYYQ5VHnokdT7RZn=w213-h160-k-no" width="400" height="300" alt="Restaurant Website Screenshot" class="rounded-md mb-4"></a>
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Restaurant Website</h3>
-                        <p class="text-black mb-4">
-                            A website for a restaurant, with online menu and reservation features.
-                        </p>
-                        <a href="https://gurkhanimtorestaurant.co.uk/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <a href="https://girvanafoods.com/"><img src="https://girvanafoods.com/wp-content/uploads/2025/03/9.webp" width="400" height="300" alt="E-commerce Website Screenshot" class="rounded-md mb-4"></a>
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">E-commerce Website</h3>
-                        <p class="text-gray-700 mb-4">
-                            A fully functional e-commerce site developed using WordPress and custom plugins.
-                        </p>
-                        <a href="https://girvanafoods.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <a href="https://thegamealley.com/"><img src="https://thegamealley.com/wp-content/uploads/2025/02/computer-games-6578102_1280.jpg" width="400" height="300" alt="The Game Alley Screenshot" class="rounded-md mb-4"></a>
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">The Game Alley</h3>
-                        <p class="text-gray-700 mb-4">
-                            A responsive website for games parlour, showcasing their games and services.
-                        </p>
-                        <a href="https://thegamealley.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                       <a href="https://blinkxmedia.com/"> <img src="https://blinkxmedia.com/wp-content/uploads/2022/03/left-decor-we-do-01.jpg" width="400" height="300" alt="Social Media Marketing Agency Screenshot" class="rounded-md mb-4"></a>
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Social Media Marketing Agency</h3>
-                        <p class="text-gray-700 mb-4">
-                            A website for a Social Media Marketing Agency, Provide Expert Social Media Marketing Services.
-                        </p>
-                        <a href="https://blinkxmedia.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <a href="https://elviajedeshiva.com/"><img src="https://elviajedeshiva.com/wp-content/uploads/2025/04/kerala-2.webp" width="400" height="300" alt="El Viaje de Shiva Screenshot" class="rounded-md mb-4"></a>
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">El Viaje de Shiva</h3>
-                        <p class="text-gray-700 mb-4">
-                            A travel, blog website And tour booking website.
-                        </p>
-                        <a href="https://elviajedeshiva.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <a href="https://chimneyhobs.com/"><img src="https://chimneyhobs.com/wp-content/uploads/2024/12/ccb6.jpg" width="400" height="300" alt="Chimney Hobs Screenshot" class="rounded-md mb-4"></a>
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Chimney Hobs</h3>
-                        <p class="text-gray-700 mb-4">
-                            A Service Based website for kitchen appliances.
-                        </p>
-                        <a href="https://chimneyhobs.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <a href="https://dhruvservicecenter.com/"><img src="https://dhruvservicecenter.com/wp-content/uploads/2025/02/1.png" width="400" height="300" alt="Dhruv Service Center Screenshot" class="rounded-md mb-4"></a>
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Dhruv Service Center</h3>
-                        <p class="text-gray-700 mb-4">
-                            A service center website.
-                        </p>
-                        <a href="https://dhruvservicecenter.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <a href="https://guruenterprises.online/"><img src="https://guruenterprises.online/wp-content/uploads/2025/03/WhatsApp-Image-2025-03-27-at-6.04.54-PM-1024x1024.jpeg" width="400" height="300" alt="Guru Enterprises Screenshot" class="rounded-md mb-4"></a>
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Guru Enterprises</h3>
-                        <p class="text-gray-700 mb-4">
-                            At Guru Enterprises, They provide expert and reliable air conditioning services to keep your system running smoothly and efficiently.
-                        </p>
-                        <a href="https://guruenterprises.online/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <a href="https://ardistudio.online/"><img src="https://ardistudio.online/wp-content/uploads/2025/02/2025-01-31.jpg" width="400" height="300" alt="Ardistudio Screenshot" class="rounded-md mb-4"></a>
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Ardistudio</h3>
-                        <p class="text-gray-700 mb-4">
-                            Ardi STUDIO is a premier interior design firm based in Indira nagar Lucknow. Established in 2015, we specialize in creating contemporary and functional spaces that reflect our clients’ personal style.
-                        </p>
-                        <a href="https://ardistudio.online/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <a href="https://pigeoninvisiblegrill.com/"><img src="https://pigeoninvisiblegrill.com/wp-content/uploads/2025/03/2-460x460.webp" width="400" height="300" alt="Pigeon Invisible Grill Screenshot" class="rounded-md mb-4"></a>
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Pigeon Invisible Grill</h3>
-                        <p class="text-gray-700 mb-4">
-                            Pigeon Invisible Grill specializes in high-quality, durable and aesthetically pleasing invisible grate solutions that ensure your safety while maintaining a clear view.
-                        </p>
-                        <a href="https://pigeoninvisiblegrill.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <a href="https://pdpublicschools.com/"><img src="https://pdpublicschools.com/wp-content/uploads/2025/01/hhhhkhk.jpg" width="400" height="300" alt="PD Public Schools Screenshot" class="rounded-md mb-4"></a>
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">PD Public Schools</h3>
-                        <p class="text-gray-700 mb-4">
-                            A website for PD Public Schools.
-                        </p>
-                        <a href="https://pdpublicschools.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <a href="https://advancepani.com/"><img src="https://advancepani.com/wp-content/uploads/2025/01/Advancepani-banner-image-1-scaled.webp" width="400" height="300" alt="Advance Pani Screenshot" class="rounded-md mb-4"></a>
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Advance Pani</h3>
-                        <p class="text-gray-700 mb-4">
-                            A website for water services.
-                        </p>
-                        <a href="https://advancepani.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <a href="https://kodestree.com/"><img src="https://kodestree.com/wp-content/uploads/2025/02/bootcamp-course-page3-02-scaled.webp" width="400" height="300" alt="Kodestree Screenshot" class="rounded-md mb-4"></a>
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Kodestree</h3>
-                        <p class="text-gray-700 mb-4">
-                            A website for online course selling. also accept online payments too
-                        </p>
-                        <a href="https://kodestree.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <a href="https://score99academy.com/"><img src="https://score99academy.com/wp-content/uploads/2024/11/fhfh-1024x1024.jpg" width="400" height="300" alt="Score99 Academy Screenshot" class="rounded-md mb-4"></a>
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Score99 Academy</h3>
-                        <p class="text-gray-700 mb-4">
-                            An educational academy website.
-                        </p>
-                        <a href="https://score99academy.com/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://kpcvetedu.in/wp-content/uploads/2024/01/KPC_logo-removebg-preview-1.png" width="400" height="300" alt="KPC Vet Edu Screenshot" class="rounded-md mb-4"></a>
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">KPC Vet Edu</h3>
-                        <p class="text-gray-700 mb-4">
-                            An educational website for veterinary education.
-                        </p>
-                        <a href="https://kpcvetedu.in/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-
-                    <div class="project-card">
-                        <a href="https://sonurajpoot463.github.io/infinite-carousel/"><img src="https://github.com/sonurajpoot463/portfolio/blob/main/images/infinite%20responsive%20slider.png?raw=true" width="400" height="300" alt="infinite carousel slider" class="rounded-md mb-4"></a>
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">infinite carousel slider responsive</h3>
-                        <p class="text-gray-700 mb-4">
-                            infinite responsive slider carousel with auto scroll and arrow and dots.
-                        </p>
-                        <a href="https://sonurajpoot463.github.io/infinite-carousel/" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-
-                    <div class="project-card">
-                        <img src="https://placehold.co/400x300/EEE/31343C" alt="Personal Blog Screenshot" class="rounded-md mb-4">
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Personal Blog</h3>
-                        <p class="text-gray-700 mb-4">
-                            A personal blog website with a focus on travel and photography.
-                        </p>
-                        <a href="#" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://placehold.co/400x300/EEE/31343C" alt="Real Estate Website Screenshot" class="rounded-md mb-4">
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Real Estate Website</h3>
-                        <p class="text-gray-700 mb-4">
-                            A website for a real estate agency, with property listings and search functionality.
-                        </p>
-                        <a href="#" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://placehold.co/400x300/EEE/31343C" alt="Travel Booking Website Screenshot" class="rounded-md mb-4">
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Travel Booking Website</h3>
-                        <p class="text-gray-700 mb-4">
-                            A website for booking travel packages and accommodations.
-                        </p>
-                        <a href="#" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://placehold.co/400x300/EEE/31343C" alt="Event Management Website Screenshot" class="rounded-md mb-4">
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Event Management Website</h3>
-                        <p class="text-gray-700 mb-4">
-                            A website for managing events, with ticketing and scheduling features.
-                        </p>
-                        <a href="#" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://placehold.co/400x300/EEE/31343C" alt="Job Portal Website Screenshot" class="rounded-md mb-4">
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Job Portal Website</h3>
-                        <p class="text-gray-700 mb-4">
-                            A website for job seekers and recruiters, with job listings and application features.
-                        </p>
-                        <a href="#" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://placehold.co/400x300/EEE/31343C" alt="Educational Website Screenshot" class="rounded-md mb-4">
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Educational Website</h3>
-                        <p class="text-gray-700 mb-4">
-                            A website for an educational institution, with course listings and student resources.
-                        </p>
-                        <a href="#" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://placehold.co/400x300/EEE/31343C" alt="Non-profit Website Screenshot" class="rounded-md mb-4">
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Non-profit Website</h3>
-                        <p class="text-gray-700 mb-4">
-                            A website for a non-profit organization, with donation and volunteer features.
-                        </p>
-                        <a href="#" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://placehold.co/400x300/EEE/31343C" alt="Personal Portfolio Website Screenshot" class="rounded-md mb-4">
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Personal Portfolio Website</h3>
-                        <p class="text-gray-700 mb-4">
-                            A personal portfolio website showcasing projects and skills.
-                        </p>
-                        <a href="#" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://placehold.co/400x300/EEE/31343C" alt="Business Directory Website Screenshot" class="rounded-md mb-4">
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Business Directory Website</h3>
-                        <p class="text-gray-700 mb-4">
-                            A website for listing businesses, with search and review features.
-                        </p>
-                        <a href="#" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://placehold.co/400x300/EEE/31343C" alt="Social Networking Website Screenshot" class="rounded-md mb-4">
-                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Social Networking Website</h3>
-                        <p class="text-gray-700 mb-4">
-                                A social networking site with user profiles, posts, and connections.
-                        </p>
-                        <a href="#" class="text-blue-500 hover:text-blue-700 transition duration-300">View Project</a>
-                    </div>
-                    
-                </div>
-            </section>
-            <section id="contact" class="bg-white rounded-lg shadow-lg p-8 mb-10">
-                <h2 class="section-title">Contact Me</h2>
-                <p class="text-gray-700 text-lg mb-6">
-                    Feel free to reach out to me via email or connect with me on social media.
-                </p>
-                <ul class="list-none">
-                    <li class="mb-3">
-                        <span class="font-semibold text-gray-800">Email:</span>
-                        <a href="mailto:rajpootsonu463@gmail.com" class="text-blue-500 hover:text-blue-700 transition duration-300 text-lg">rajpootsonu463@gmail.com</a>
-                    </li>
-                    <li class="mb-3">
-                        <span class="font-semibold text-gray-800">LinkedIn:</span>
-                        <a href="https://www.linkedin.com/in/sonu-rajpoot/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 transition duration-300 text-lg">https://www.linkedin.com/in/sonu-rajpoot/</a>
-                    </li>
-                    <li>
-                        <span class="font-semibold text-gray-800">GitHub:</span>
-                        <a href="https://github.com/sonurajpoot463" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 transition duration-300 text-lg">https://github.com/sonurajpoot463</a>
-                    </li>
-                </ul>
-            </section>
-        </main>
-        <footer class="bg-gray-800 text-white py-6 rounded-t-lg shadow-md">
-            <div class="container mx-auto px-4 text-center">
-                <p class="text-lg">© 2025 Sonu Rajpoot. All rights reserved.</p>
-            </div>
-        </footer>
-    </div>
-</body>
-</html>
-
-
+</section>
