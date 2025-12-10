@@ -1,3 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonu Rajpoot - Web Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0; /* Remove default body margin */
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+        #contact,#projects,#about{
+            background: rgba(133, 255, 239, 0.5);
+        }
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1; /* Send the video to the background */
+        }
+        .video-background video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover; /* Cover the entire area */
+        }
+        .content-overlay {
+            position: relative;
+            z-index: 1; /* Keep content above the video */
+            background-color: rgba(255, 255, 255, 0.2); /* Add a white overlay for readability */
+            min-height: 100vh; /* Ensure content area takes full height */
+            display: flex;
+            flex-direction: column;
+        }
+        .project-card {
+            background-color: #141414;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+        .project-card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .project-card h3 {
+            color: #4f46e5;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .project-card p {
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+        .project-card a {
+            color: #3b82f6;
+            transition: color 0.3s ease;
+        }
+        .project-card a:hover {
+            color: #2563eb;
+        }
+        .section-title {
+            color: #1e293b;
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="https://cdn.pixabay.com/video/2023/10/24/186363-877727695_tiny.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="content-overlay">
+        <header class="bg-gradient-to-r from-blue-500 to-black-600 text-white py-6 shadow-md rounded-b-lg">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center">
+                    <a href="https://sonurajpoot463.github.io/portfolio/"><h1 class="text-3xl font-semibold">Sonu Rajpoot</h1></a>
+                    <nav>
+                        <ul class="flex space-x-8">
+                            <li><a href="#about" class="hover:text-gray-200 transition duration-300 text-lg font-medium">About</a></li>
+                            <li><a href="#projects" class="hover:text-gray-200 transition duration-300 text-lg font-medium">Projects</a></li>
+                            <li><a href="#contact" class="hover:text-gray-200 transition duration-300 text-lg font-medium">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="container mx-auto px-4 py-10 flex-grow">
+            <section id="about" class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="section-title">About Me</h2>
+                <p class=".text-white text-lg">
+                    Hello! I'm Sonu Rajpoot, a passionate and experienced web developer with over 2.5 years of experience specializing in WordPress. I hold a B.Tech in Computer Science from RRIMT, Lucknow (2019). I have a strong command of HTML, CSS, and JavaScript, and I am proficient in WordPress, Elementor, and developing custom themes and plugins. I have successfully delivered over 25 websites, including blogs, digital agency sites, e-commerce platforms, landing pages, medical websites, and school websites. I also run a website <a href="https://updater.blog/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 transition duration-300">Updater.blog</a>.
+                </p>
+            </section>
+
 <section id="projects" class="bg-white rounded-lg shadow-lg p-8 mb-10">
     <h2 class="section-title">My Projects</h2>
 
@@ -270,4 +386,33 @@
 
     </div>
 </section>
+            <section id="contact" class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h2 class="section-title">Contact Me</h2>
+                <p class="text-gray-700 text-lg mb-6">
+                    Feel free to reach out to me via email or connect with me on social media.
+                </p>
+                <ul class="list-none">
+                    <li class="mb-3">
+                        <span class="font-semibold text-gray-800">Email:</span>
+                        <a href="mailto:rajpootsonu463@gmail.com" class="text-blue-500 hover:text-blue-700 transition duration-300 text-lg">rajpootsonu463@gmail.com</a>
+                    </li>
+                    <li class="mb-3">
+                        <span class="font-semibold text-gray-800">LinkedIn:</span>
+                        <a href="https://www.linkedin.com/in/sonu-rajpoot/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 transition duration-300 text-lg">https://www.linkedin.com/in/sonu-rajpoot/</a>
+                    </li>
+                    <li>
+                        <span class="font-semibold text-gray-800">GitHub:</span>
+                        <a href="https://github.com/sonurajpoot463" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 transition duration-300 text-lg">https://github.com/sonurajpoot463</a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer class="bg-gray-800 text-white py-6 rounded-t-lg shadow-md">
+            <div class="container mx-auto px-4 text-center">
+                <p class="text-lg">© 2025 Sonu Rajpoot. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
 
